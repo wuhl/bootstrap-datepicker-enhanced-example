@@ -1,0 +1,23 @@
+<h1><%= t('helpers.titles.show', model: ProjectPhase.model_name.human ) %></h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('activerecord.attributes.project_phase.project') %>:</strong>
+  <%= @project_phase.project %>
+</p>
+<p>
+  <strong><%= t('activerecord.attributes.project_phase.name') %>:</strong>
+  <%= @project_phase.name %>
+</p>
+<p>
+  <strong><%= t('activerecord.attributes.project_phase.start') %>:</strong>
+  <%= l @project_phase.start %>
+</p>
+<p>
+  <strong><%= t('activerecord.attributes.project_phase.end') %>:</strong>
+  <%= l @project_phase.end %>
+</p>
+
+<%= link_to t('helpers.links.edit'), edit_project_phase_path(@project_phase) %> |
+<%= link_to t('helpers.links.view_all'), project_phases_path %>

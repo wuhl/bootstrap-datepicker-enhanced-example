@@ -1,0 +1,12 @@
+# de.model.project.yml
+de:
+  activerecord:
+    models:
+      project:
+        one: "Projekt"
+        other: "Projekte"
+    attributes:
+      project:
+        name: "Name"
+        start: "Beginn"
+        end: "Ende"

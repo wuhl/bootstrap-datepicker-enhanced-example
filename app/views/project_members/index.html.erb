@@ -1,0 +1,27 @@
+<h1><%= t('helpers.titles.index', model: ProjectMember.model_name.human( :count=>2 ) ) %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('activerecord.attributes.project_member.project_phase') %></th>
+      <th><%= t('activerecord.attributes.project_member.resource') %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_members.each do |project_member| %>
+      <tr>
+        <td><%= project_member.project_phase %></td>
+        <td><%= project_member.resource %></td>
+        <td><%= link_to t('helpers.links.show'), project_member %></td>
+        <td><%= link_to t('helpers.links.edit'), edit_project_member_path(project_member) %></td>
+        <td><%= link_to t('helpers.links.destroy'), project_member, method: :delete, data: { confirm: t('helpers.links.confirm') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to t('helpers.titles.new', model: ProjectMember.model_name.human ), new_project_member_path %></p>

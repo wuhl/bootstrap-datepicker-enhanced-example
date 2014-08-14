@@ -1,0 +1,13 @@
+# de.model.project_phase.yml
+de:
+  activerecord:
+    models:
+      project_phase:
+        one: "Projektphase"
+        other: "Projektphasen"
+    attributes:
+      project_phase:
+        project: "Projekt"
+        name: "Name"
+        start: "Beginn"
+        end: "Ende"

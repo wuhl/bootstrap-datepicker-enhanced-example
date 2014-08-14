@@ -1,0 +1,31 @@
+<h1><%= t('helpers.titles.index', model: ProjectPhase.model_name.human( :count=>2 ) ) %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= t('activerecord.attributes.project_phase.project') %></th>
+      <th><%= t('activerecord.attributes.project_phase.name') %></th>
+      <th><%= t('activerecord.attributes.project_phase.start') %></th>
+      <th><%= t('activerecord.attributes.project_phase.end') %></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_phases.each do |project_phase| %>
+      <tr>
+        <td><%= project_phase.project %></td>
+        <td><%= project_phase.name %></td>
+        <td><%= l project_phase.start %></td>
+        <td><%= l project_phase.end %></td>
+        <td><%= link_to t('helpers.links.show'), project_phase %></td>
+        <td><%= link_to t('helpers.links.edit'), edit_project_phase_path(project_phase) %></td>
+        <td><%= link_to t('helpers.links.destroy'), project_phase, method: :delete, data: { confirm: t('helpers.links.confirm') } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><%= link_to t('helpers.titles.new', model: ProjectPhase.model_name.human ), new_project_phase_path %></p>

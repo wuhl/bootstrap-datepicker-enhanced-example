@@ -1,0 +1,15 @@
+<h1><%= t('helpers.titles.show', model: ProjectMember.model_name.human ) %></h1>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t('activerecord.attributes.project_member.project_phase') %>:</strong>
+  <%= @project_member.project_phase %>
+</p>
+<p>
+  <strong><%= t('activerecord.attributes.project_member.resource') %>:</strong>
+  <%= @project_member.resource %>
+</p>
+
+<%= link_to t('helpers.links.edit'), edit_project_member_path(@project_member) %> |
+<%= link_to t('helpers.links.view_all'), project_members_path %>

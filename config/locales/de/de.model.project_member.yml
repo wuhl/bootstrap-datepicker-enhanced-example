@@ -1,0 +1,11 @@
+# de.model.project_member.yml
+de:
+  activerecord:
+    models:
+      project_member:
+        one: "Projektmitglied"
+        other: "Projektmitglieder"
+    attributes:
+      project_member:
+        project_phase: "Projektphase"
+        resource: "Mitarbeiter"
